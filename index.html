@@ -42,8 +42,16 @@
 
         header h1 {
             margin: 0;
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            animation: text-glow 1.5s infinite;
+        }
+
+        @keyframes text-glow {
+            0% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFD700; }
+            50% { text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700; }
+            100% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFD700; }
         }
 
         .announcement {
@@ -216,8 +224,7 @@
             text-align: center;
             font-size: 1.5rem;
             font-weight: bold;
-            width: 80%;
-            margin: 20px auto;
+            width: 100%;
             box-sizing: border-box;
         }
 
@@ -328,10 +335,10 @@
     <header>
         <div class="header-content">
             <img src="logo.png" alt="Logo">
-            <h1>شري لولدك محفظة بجودة مزيانة وباللون لي كيعجبو، ومن بين كولكسيون 2024-2025، باش تشجعو يرجع لقرايتو بثقة في النفس 😊📚🎒 وسط صحابو  </h1>
+            <h1>شري لولدك محفظة بجودة مزيانة وباللون لي كيعجبو، باش تشجعو يرجع لقرايتو بثقة في النفس 😊📚🎒 وسط صحابو</h1>
         </div>
         <div class="container">
-            <div class="announcement"> !استفيدوا من عروض العودة إلى المدرسة لطلب الحقيبة المناسبة لطفلك</div>
+            <div class="announcement">استفيدوا من عروض العودة إلى المدرسة لطلب الحقيبة المناسبة لطفلك!</div>
             <div class="delivery">
                 <img src="delivery-icon.png" alt="Delivery">
                 <span>التوصيل مجاني لجميع المدن المغربية في أقل من 48 ساعة</span>
@@ -343,7 +350,7 @@
         </div>
     </header>
     <section class="offer">
-        استفيدوا من عرض 3 قطع مقابل 690 درهم <span class="price">
+        استفيدوا من عرض 3 قطع مقابل 690 درهم <span class="price">بدل 800 درهم</span>
     </section>
 
     <div class="container">
