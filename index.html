@@ -80,7 +80,9 @@
             align-items: center;
             margin-top: 10px;
             font-size: 1.2rem;
-            color: #FF6347;
+            color: white;
+            position: relative;
+            overflow: hidden;
         }
 
         .cash-on-delivery img {
@@ -88,10 +90,40 @@
             margin-right: 10px;
         }
 
+        .confetti {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .confetti div {
+            position: absolute;
+            top: -10px;
+            width: 10px;
+            height: 10px;
+            background-color: #FF6347;
+            opacity: 0.7;
+            animation: confetti 5s infinite;
+        }
+
         @keyframes delivery-animation {
             0% {transform: translateX(0);}
             50% {transform: translateX(10px);}
             100% {transform: translateX(0);}
+        }
+
+        @keyframes confetti {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
         }
 
         .colors-section {
@@ -317,6 +349,18 @@
             <div class="cash-on-delivery">
                 <img src="cash-icon.png" alt="Cash on Delivery">
                 <span>الدفع عند التسليم</span>
+                <div class="confetti">
+                    <!-- Confetti elements -->
+                    <div style="left: 10%; animation-delay: 0s;"></div>
+                    <div style="left: 20%; animation-delay: 1s;"></div>
+                    <div style="left: 30%; animation-delay: 2s;"></div>
+                    <div style="left: 40%; animation-delay: 3s;"></div>
+                    <div style="left: 50%; animation-delay: 4s;"></div>
+                    <div style="left: 60%; animation-delay: 5s;"></div>
+                    <div style="left: 70%; animation-delay: 6s;"></div>
+                    <div style="left: 80%; animation-delay: 7s;"></div>
+                    <div style="left: 90%; animation-delay: 8s;"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -387,7 +431,7 @@
 
     <!-- Icône WhatsApp avec texte -->
     <div class="whatsapp-icon">
-        <a href="https://wa.me/212658038117" target="_blank">
+        <a href="https://wa.me/0658038117" target="_blank">
             <img src="whatsapp-icon.png" alt="WhatsApp">
         </a>
         <div class="whatsapp-text">اتصل بنا لمزيد من المعلومات</div>
