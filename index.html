@@ -29,17 +29,21 @@
             position: relative;
         }
 
+        header .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header img {
+            width: 70px;
+            margin-bottom: 10px;
+        }
+
         header h1 {
             margin: 0;
             font-size: 2rem;
             color: #fff;
-        }
-
-        header .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 70px;
         }
 
         .announcement {
@@ -80,7 +84,7 @@
             align-items: center;
             margin-top: 10px;
             font-size: 1.2rem;
-            color: rgb(10, 10, 10);
+            color: white;
             position: relative;
             overflow: hidden;
         }
@@ -338,9 +342,11 @@
 <body>
 
     <header>
-        <img src="logo.png" alt="Logo" class="logo">
-        <div class="container">
+        <div class="header-content">
+            <img src="logo.png" alt="Logo">
             <h1>الحقيبة المدرسية المثالية لطفلك</h1>
+        </div>
+        <div class="container">
             <div class="announcement">استفيدوا من عروض العودة إلى المدرسة لطلب الحقيبة المناسبة لطفلك!</div>
             <div class="delivery">
                 <img src="delivery-icon.png" alt="Delivery">
@@ -434,7 +440,7 @@
         <a href="https://wa.me/0658038117" target="_blank">
             <img src="whatsapp-icon.png" alt="WhatsApp">
         </a>
-        <div class="whatsapp-text"> لمزيد من المعلومات</div>
+        <div class="whatsapp-text">اتصل بنا لمزيد من المعلومات</div>
     </div>
 
     <script>
