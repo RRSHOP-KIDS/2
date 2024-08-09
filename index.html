@@ -120,19 +120,42 @@
         }
 
         .order-button {
-            background-color: #FF6347;
+            background-color: #007BFF;
             color: #fff;
-            padding: 10px 20px;
+            padding: 15px 30px;
             text-decoration: none;
             border-radius: 50px;
             display: inline-block;
-            margin-top: 10px;
-            font-size: 1rem;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
             transition: background-color 0.3s ease;
+            animation: glowingButton 1.5s infinite;
         }
 
         .order-button:hover {
-            background-color: #ff4500;
+            background-color: #0056b3;
+        }
+
+        @keyframes glowingButton {
+            0% { box-shadow: 0 0 10px #007BFF; }
+            50% { box-shadow: 0 0 20px #007BFF; }
+            100% { box-shadow: 0 0 10px #007BFF; }
+        }
+
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25D366;
+            border-radius: 50%;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .whatsapp-icon img {
+            width: 50px;
+            height: 50px;
         }
 
         .offer, .offer-red {
@@ -275,34 +298,30 @@
                 <div>
                     <img src="1.jpeg" alt="حقيبة خضراء">
                     <div class="color-description">حقيبة خضراء</div>
-                    <a href="#order-form" class="order-button">اطلب الآن</a>
                 </div>
                 <div>
                     <img src="2.jpeg" alt="حقيبة صفراء">
                     <div class="color-description">حقيبة صفراء</div>
-                    <a href="#order-form" class="order-button">اطلب الآن</a>
                 </div>
                 <div>
                     <img src="3.jpeg" alt="حقيبة زرقاء">
                     <div class="color-description">حقيبة زرقاء</div>
-                    <a href="#order-form" class="order-button">اطلب الآن</a>
                 </div>
                 <div>
                     <img src="4.jpeg" alt="حقيبة بنفسجية">
                     <div class="color-description">حقيبة بنفسجية</div>
-                    <a href="#order-form" class="order-button">اطلب الآن</a>
                 </div>
                 <div>
                     <img src="5.jpeg" alt="حقيبة زرقاء داكنة">
                     <div class="color-description">حقيبة زرقاء داكنة</div>
-                    <a href="#order-form" class="order-button">اطلب الآن</a>
                 </div>
                 <div>
                     <img src="6.jpeg" alt="حقيبة وردية">
                     <div class="color-description">حقيبة وردية</div>
-                    <a href="#order-form" class="order-button">اطلب الآن</a>
                 </div>
             </div>
+            <!-- Bouton "اطلب الآن" centré sous toutes les images -->
+            <a href="#order-form" class="order-button">اطلب الآن</a>
         </section>
 
         <section class="offer-red">
@@ -332,6 +351,13 @@
     <footer>
         <p>جميع الحقوق محفوظة &copy; 2024 RRSHOP Kids</p>
     </footer>
+
+    <!-- Icône WhatsApp -->
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/212658038117" target="_blank">
+            <img src="whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
 
     <script>
         function updateColorSelectors() {
