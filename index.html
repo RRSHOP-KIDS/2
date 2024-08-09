@@ -39,7 +39,7 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            width: 70px; /* Diminuer la taille du logo */
+            width: 70px;
         }
 
         .announcement {
@@ -66,9 +66,24 @@
             text-align: center;
             border-radius: 10px;
             animation: delivery-animation 2s infinite;
+            position: relative;
         }
 
         .delivery img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .cash-on-delivery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #FF6347;
+        }
+
+        .cash-on-delivery img {
             width: 30px;
             margin-right: 10px;
         }
@@ -151,11 +166,25 @@
             border-radius: 50%;
             padding: 10px;
             z-index: 1000;
+            animation: whatsappPulse 1.5s infinite;
         }
 
         .whatsapp-icon img {
             width: 50px;
             height: 50px;
+        }
+
+        .whatsapp-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        @keyframes whatsappPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
 
         .offer, .offer-red {
@@ -285,6 +314,10 @@
                 <img src="delivery-icon.png" alt="Delivery">
                 <span>التوصيل مجاني لجميع المدن المغربية في أقل من 48 ساعة</span>
             </div>
+            <div class="cash-on-delivery">
+                <img src="cash-icon.png" alt="Cash on Delivery">
+                <span>الدفع عند التسليم</span>
+            </div>
         </div>
     </header>
     <section class="offer">
@@ -352,11 +385,12 @@
         <p>جميع الحقوق محفوظة &copy; 2024 RRSHOP Kids</p>
     </footer>
 
-    <!-- Icône WhatsApp -->
+    <!-- Icône WhatsApp avec texte -->
     <div class="whatsapp-icon">
         <a href="https://wa.me/212658038117" target="_blank">
             <img src="whatsapp-icon.png" alt="WhatsApp">
         </a>
+        <div class="whatsapp-text">اتصل بنا لمزيد من المعلومات</div>
     </div>
 
     <script>
