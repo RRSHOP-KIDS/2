@@ -320,6 +320,41 @@
             font-size: 0.9rem;
         }
 
+        /* Ajout de la section pour visiter le site */
+        .visit-site-section {
+            background-color: #FFD700; /* Jaune vif */
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .visit-site-section a {
+            color: #1E90FF; /* Bleu Dodger */
+            text-decoration: underline;
+        }
+
+        .visit-site-section a.site-button {
+            background-color: #FF6347; /* Rouge vif */
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .visit-site-section a.site-button:hover {
+            background-color: #e55347; /* Un peu plus foncé pour l'effet de survol */
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 1.5rem;
@@ -399,6 +434,15 @@
         إذا اشتريت 2 <span dir="ltr">Pack</span>  ستستفيد من خصم 100 درهم 
     </section>
     
+    <!-- Section pour inviter à visiter le site web -->
+    <section class="visit-site-section">
+        <p>إذا كنتم ترغبون في معرفة المزيد عن منتجاتنا، قوموا بزيارة موقعنا على الويب
+            <a href="https://rrshop-kids.myshopyan.com/" target="_blank">https://rrshop-kids.myshopyan.com/</a>
+        </p>
+        <p>تصفحوا المزيد من المنتجات، وخاصة الحقائب المدرسية التي تلقى رواجاً كبيراً!</p>
+        <a href="https://rrshop-kids.myshopyan.com/" target="_blank" class="site-button">زوروا موقعنا الآن</a>
+    </section>
+
     <div class="container">
         <section class="form-section" id="order-form">
             <h2>إرسال طلبك</h2>
