@@ -176,6 +176,11 @@
             font-weight: bold;
             animation: whatsappPulse 1.5s infinite;
             text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .order-button:hover {
+            background-color: #0056b3;
         }
 
         @keyframes whatsappPulse {
@@ -301,7 +306,7 @@
             color: #fff;
             border: none;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         form button:hover {
@@ -395,8 +400,6 @@
                     <div class="color-description">حقيبة وردية</div>
                 </div>
             </div>
-            <!-- Bouton "اطلب الآن" centré sous toutes les images -->
-            <a href="#order-form" class="order-button">اطلب الآن</a>
         </section>
 
         <section class="form-section" id="order-form">
@@ -472,6 +475,15 @@
                 colorSelectors.appendChild(select);
             }
         }
+
+        // Rétablir la couleur du bouton après clic
+        const orderButton = document.querySelector('.order-button');
+        orderButton.addEventListener('click', function() {
+            setTimeout(function() {
+                orderButton.style.backgroundColor = '#007BFF';
+                orderButton.style.color = '#fff';
+            }, 100);
+        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
