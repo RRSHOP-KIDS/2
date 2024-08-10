@@ -155,28 +155,31 @@
             margin-top: 5px;
         }
 
-        .order-button.pulse {
+        /* Styles for the moving button */
+        .order-button-fixed {
+            position: fixed;
             background-color: #007BFF;
             color: #fff;
             padding: 15px 30px;
             text-decoration: none;
             border-radius: 50px;
-            display: inline-block;
-            margin-top: 20px;
             font-size: 1.2rem;
             font-weight: bold;
-            transition: background-color 0.3s ease;
-            animation: pulse-animation 1.5s infinite;
+            animation: glowingButton 1.5s infinite;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
         }
 
-        .order-button.pulse:hover {
+        .order-button-fixed:hover {
             background-color: #0056b3;
         }
 
-        @keyframes pulse-animation {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+        @keyframes glowingButton {
+            0% { box-shadow: 0 0 10px #007BFF; }
+            50% { box-shadow: 0 0 20px #007BFF; }
+            100% { box-shadow: 0 0 10px #007BFF; }
         }
 
         .whatsapp-icon {
@@ -400,7 +403,7 @@
                 </div>
             </div>
             <!-- Bouton "اطلب الآن" centré sous toutes les images -->
-            <a href="#order-form" class="order-button pulse">اطلب الآن</a>
+            <a href="#order-form" class="order-button-fixed">اطلب الآن</a>
         </section>
 
         
