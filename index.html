@@ -155,9 +155,18 @@
             margin-top: 5px;
         }
 
-        /* Styles for the moving button */
-        .order-button-fixed {
+        /* Styles for the moving button and WhatsApp icon */
+        .flex-container {
             position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        .order-button {
             background-color: #007BFF;
             color: #fff;
             padding: 15px 30px;
@@ -166,13 +175,11 @@
             font-size: 1.2rem;
             font-weight: bold;
             animation: glowingButton 1.5s infinite;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1000;
+            background-color: #007BFF;
+            color: #fff;
         }
 
-        .order-button-fixed:hover {
+        .order-button:hover {
             background-color: #0056b3;
         }
 
@@ -183,13 +190,9 @@
         }
 
         .whatsapp-icon {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
             background-color: #25D366;
             border-radius: 50%;
             padding: 10px;
-            z-index: 1000;
             animation: whatsappPulse 1.5s infinite;
         }
 
@@ -365,6 +368,8 @@
             </div>
         </div>
     </header>
+    
+    <!-- Offres -->
     <section class="offer" style="background-color: #FFD700; color: #FF6347; padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center; font-size: 1.5rem; font-weight: bold; width: 100%; box-sizing: border-box;">
         استفيدوا من <span dir="ltr">Pack</span> مكوّن من 3 قطع <span style="text-decoration: underline;">( محفظة بعجلات, مقلمة, حقيبة غداء )</span> مقابل 650 درهم
     </section>
@@ -372,7 +377,6 @@
         إذا اشتريت 2 <span dir="ltr">Pack</span>  ستستفيد من خصم 100 درهم 
     </section>
     
-
     <div class="container">
         <section class="colors-section">
             <h2>اختر اللون الذي يحبه طفلك</h2>
@@ -406,9 +410,6 @@
             <a href="#order-form" class="order-button-fixed">اطلب الآن</a>
         </section>
 
-        
-        
-
         <section class="form-section" id="order-form">
             <h2>إرسال طلبك</h2>
             <form id="orderForm" action="https://formspree.io/f/xanwjjbk" method="POST">
@@ -435,12 +436,15 @@
         <p>جميع الحقوق محفوظة &copy; 2024 RRSHOP Kids</p>
     </footer>
 
-    <!-- Icône WhatsApp مع النص -->
-    <div class="whatsapp-icon">
-        <a href="https://wa.me/+212658038117" target="_blank">
-            <img src="whatsapp-icon.png" alt="WhatsApp">
-        </a>
-        <div class="whatsapp-text"> لمزيد من المعلومات</div>
+    <!-- Icône WhatsApp avec le bouton "اطلب الآن" -->
+    <div class="flex-container">
+        <div class="whatsapp-icon">
+            <a href="https://wa.me/+212658038117" target="_blank">
+                <img src="whatsapp-icon.png" alt="WhatsApp">
+            </a>
+            <div class="whatsapp-text"> لمزيد من المعلومات</div>
+        </div>
+        <a href="#order-form" class="order-button">اطلب الآن</a>
     </div>
 
     <script>
