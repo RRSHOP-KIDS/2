@@ -161,13 +161,9 @@
             bottom: 20px;
             left: 20px;
             display: flex;
-            justify-content: space-between;
-            width: 100%;
             align-items: center;
             gap: 20px;
             z-index: 1000;
-            padding: 0 20px;
-            box-sizing: border-box;
         }
 
         .order-button {
@@ -178,17 +174,19 @@
             border-radius: 50px;
             font-size: 1.2rem;
             font-weight: bold;
-            animation: whatsappPulse 1.5s infinite;
+            animation: glowingButton 1.5s infinite;
+            background-color: #007BFF;
+            color: #fff;
         }
 
         .order-button:hover {
             background-color: #0056b3;
         }
 
-        @keyframes whatsappPulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+        @keyframes glowingButton {
+            0% { box-shadow: 0 0 10px #007BFF; }
+            50% { box-shadow: 0 0 20px #007BFF; }
+            100% { box-shadow: 0 0 10px #007BFF; }
         }
 
         .whatsapp-icon {
@@ -208,6 +206,12 @@
             font-size: 0.9rem;
             color: #fff;
             margin-top: 10px;
+        }
+
+        @keyframes whatsappPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
 
         .offer {
