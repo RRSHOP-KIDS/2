@@ -311,21 +311,9 @@
             border: 1px solid #1E90FF;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: transparent;
-            color: #fff;
-            margin-top: 40px;
-            font-size: 0.9rem;
-        }
-
-        /* Ajout de la section pour visiter le site */
         .visit-site-section {
-            background-color: #FFD700; /* Jaune vif */
             color: #333;
             padding: 20px;
-            border-radius: 10px;
             margin-top: 20px;
             text-align: center;
             font-size: 1.2rem;
@@ -334,25 +322,29 @@
             box-sizing: border-box;
         }
 
-        .visit-site-section a {
-            color: #1E90FF; /* Bleu Dodger */
-            text-decoration: underline;
-        }
-
         .visit-site-section a.site-button {
-            background-color: #FF6347; /* Rouge vif */
+            background-color: #FF6347;
             color: #fff;
             padding: 10px 20px;
-            border-radius: 50px;
-            font-size: 1.2rem;
             text-decoration: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
             display: inline-block;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
+            animation: whatsappPulse 1.5s infinite;
         }
 
         .visit-site-section a.site-button:hover {
-            background-color: #e55347; /* Un peu plus foncé pour l'effet de survol */
+            background-color: #cc4f39;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: transparent;
+            color: #fff;
+            margin-top: 40px;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
@@ -434,14 +426,11 @@
         إذا اشتريت 2 <span dir="ltr">Pack</span>  ستستفيد من خصم 100 درهم 
     </section>
     
-    <!-- Section pour inviter à visiter le site web -->
-    <section class="visit-site-section">
-        <p>إذا كنتم ترغبون في معرفة المزيد عن منتجاتنا، قوموا بزيارة موقعنا على الويب
-            <a href="https://rrshop-kids.myshopyan.com/" target="_blank">https://rrshop-kids.myshopyan.com/</a>
-        </p>
-        <p>تصفحوا المزيد من المنتجات، وخاصة الحقائب المدرسية التي تلقى رواجاً كبيراً!</p>
-        <a href="https://rrshop-kids.myshopyan.com/" target="_blank" class="site-button">زوروا موقعنا الآن</a>
-    </section>
+    <!-- Section "Visitez notre site" -->
+    <div class="visit-site-section">
+        <p>إذا كنت ترغب في معرفة المزيد عن منتجاتنا الخاصة باحتياجات أطفالك، وخاصة نماذج أخرى من المحافظ،</p>
+        <a href="https://rrshop-kids.myshopyan.com" target="_blank" class="site-button">زوروا موقعنا الآن</a>
+    </div>
 
     <div class="container">
         <section class="form-section" id="order-form">
