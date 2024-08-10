@@ -174,19 +174,14 @@
             border-radius: 50px;
             font-size: 1.2rem;
             font-weight: bold;
-            animation: glowingButton 1.5s infinite;
-            background-color: #007BFF;
-            color: #fff;
+            animation: whatsappPulse 1.5s infinite;
+            text-align: center;
         }
 
-        .order-button:hover {
-            background-color: #0056b3;
-        }
-
-        @keyframes glowingButton {
-            0% { box-shadow: 0 0 10px #007BFF; }
-            50% { box-shadow: 0 0 20px #007BFF; }
-            100% { box-shadow: 0 0 10px #007BFF; }
+        @keyframes whatsappPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
 
         .whatsapp-icon {
@@ -206,12 +201,6 @@
             font-size: 0.9rem;
             color: #fff;
             margin-top: 10px;
-        }
-
-        @keyframes whatsappPulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
         }
 
         .offer {
@@ -407,7 +396,7 @@
                 </div>
             </div>
             <!-- Bouton "اطلب الآن" centré sous toutes les images -->
-            <a href="#order-form" class="order-button-fixed">اطلب الآن</a>
+            <a href="#order-form" class="order-button">اطلب الآن</a>
         </section>
 
         <section class="form-section" id="order-form">
