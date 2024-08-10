@@ -72,21 +72,25 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #fff;
             color: #333;
             padding: 10px;
             margin-top: 10px;
             font-size: 1rem;
             font-weight: bold;
             text-align: center;
-            border-radius: 10px;
-            animation: delivery-animation 2s infinite;
             position: relative;
         }
 
         .delivery img {
             width: 30px;
             margin-right: 10px;
+            animation: delivery-animation 2s infinite;
+        }
+
+        @keyframes delivery-animation {
+            0% {transform: translateX(0);}
+            50% {transform: translateX(10px);}
+            100% {transform: translateX(0);}
         }
 
         .cash-on-delivery {
@@ -107,12 +111,6 @@
             0% { box-shadow: 0 0 10px #FFD700; }
             50% { box-shadow: 0 0 30px #FFD700; }
             100% { box-shadow: 0 0 10px #FFD700; }
-        }
-
-        @keyframes delivery-animation {
-            0% {transform: translateX(0);}
-            50% {transform: translateX(10px);}
-            100% {transform: translateX(0);}
         }
 
         .colors-section {
