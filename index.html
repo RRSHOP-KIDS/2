@@ -155,7 +155,7 @@
             margin-top: 5px;
         }
 
-        .order-button {
+        .order-button.pulse {
             background-color: #007BFF;
             color: #fff;
             padding: 15px 30px;
@@ -166,17 +166,17 @@
             font-size: 1.2rem;
             font-weight: bold;
             transition: background-color 0.3s ease;
-            animation: glowingButton 1.5s infinite;
+            animation: pulse-animation 1.5s infinite;
         }
 
-        .order-button:hover {
+        .order-button.pulse:hover {
             background-color: #0056b3;
         }
 
-        @keyframes glowingButton {
-            0% { box-shadow: 0 0 10px #007BFF; }
-            50% { box-shadow: 0 0 20px #007BFF; }
-            100% { box-shadow: 0 0 10px #007BFF; }
+        @keyframes pulse-animation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
 
         .whatsapp-icon {
@@ -364,8 +364,6 @@
     </header>
     <section class="offer" style="background-color: #FFD700; color: #FF6347; padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center; font-size: 1.5rem; font-weight: bold; width: 100%; box-sizing: border-box;">
         استفيدوا من <span dir="ltr">Pack</span> مكوّن من 3 قطع <span style="text-decoration: underline;">( محفظة بعجلات, مقلمة, حقيبة غداء )</span> مقابل 650 درهم
-    <!-- Bouton "اطلب الآن" centré sous toutes les images -->
-    <a href="#order-form" class="order-button">اطلب الآن</a>
     </section>
     <section class="offer-red" style="background-color: #FF6347; color: #f1eeed; padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center; font-size: 1.5rem; font-weight: bold; width: 100%; box-sizing: border-box;">
         إذا اشتريت 2 <span dir="ltr">Pack</span>  ستستفيد من خصم 100 درهم 
@@ -402,7 +400,7 @@
                 </div>
             </div>
             <!-- Bouton "اطلب الآن" centré sous toutes les images -->
-            <a href="#order-form" class="order-button">اطلب الآن</a>
+            <a href="#order-form" class="order-button pulse">اطلب الآن</a>
         </section>
 
         
