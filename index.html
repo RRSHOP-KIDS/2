@@ -69,10 +69,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #333;
+            color: #000; /* Texte en noir */
             padding: 10px;
             margin-top: 10px;
-            font-size: 1rem;
+            font-size: 1.2rem; /* Augmentation de la taille */
             font-weight: bold;
             text-align: center;
             position: relative;
@@ -343,6 +343,27 @@
             color: #fff;
             margin-top: 40px;
             font-size: 0.9rem;
+        }
+
+        @keyframes glowing-circle-animation {
+            0% { box-shadow: 0 0 10px #FFD700; }
+            50% { box-shadow: 0 0 30px #FFD700; }
+            100% { box-shadow: 0 0 10px #FFD700; }
+        }
+
+        .cash-on-delivery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 1.2rem; /* Augmentation de la taille */
+            font-weight: bold;
+            color: #000; /* Texte en noir */
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+            border-radius: 50%;
+            animation: glowing-circle-animation 1.5s infinite;
         }
 
         @media (max-width: 768px) {
