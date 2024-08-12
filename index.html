@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(45deg, #FFD700, #1E90FF); /* Adapte les couleurs au logo */
+            background: linear-gradient(45deg, #FFD700, #1E90FF);
             color: #333;
             margin: 0;
             padding: 0;
@@ -43,26 +43,30 @@
         header h1 {
             margin: 0;
             font-size: 1.5rem;
-            color: #FFD700; /* Jaune vif */
+            color: #FFD700;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
         .product-images {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
+            flex-wrap: wrap;
             margin-top: 20px;
         }
 
         .product-images img {
-            width: 150px;
+            width: 100px;
+            height: auto;
             border-radius: 10px;
         }
 
-        .product-images .image-caption {
+        .image-caption {
             text-align: center;
-            margin-top: 5px;
+            font-size: 0.9rem;
             font-weight: bold;
+            margin-top: 5px;
+            color: #333;
         }
 
         .delivery {
@@ -90,23 +94,43 @@
             100% {transform: translateX(0);}
         }
 
+        .cash-on-delivery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: black;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+            border-radius: 50%;
+            animation: glowing-circle-animation 1.5s infinite;
+        }
+
+        @keyframes glowing-circle-animation {
+            0% { box-shadow: 0 0 10px #FFD700; }
+            50% { box-shadow: 0 0 30px #FFD700; }
+            100% { box-shadow: 0 0 10px #FFD700; }
+        }
+
         .colors-section {
             padding: 20px;
             border-radius: 10px;
             margin-top: 20px;
             text-align: center;
-            background-color: #FFE4B5; /* Adapte la couleur au logo */
+            background-color: #FFE4B5;
         }
 
         .colors-section h2 {
             margin-bottom: 20px;
-            color: #000; /* Noir pour un contraste sur le fond */
+            color: #000;
         }
 
         .color-option {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 10px;
             flex-wrap: wrap;
             margin-bottom: 20px;
         }
@@ -116,7 +140,7 @@
         }
 
         .color-item img {
-            width: 120px;
+            width: 100px;
             height: auto;
             cursor: pointer;
             border: 2px solid transparent;
@@ -125,189 +149,21 @@
         }
 
         .color-item img:hover {
-            border-color: #1E90FF; /* Bleu Dodger pour le survol */
+            border-color: #1E90FF;
         }
 
-        /* Custom styles for product descriptions */
         .color-description {
-            font-size: 1rem;
+            font-size: 0.9rem;
             margin-top: 5px;
             font-weight: bold;
         }
 
-        .color-description.green {
-            color: #006400; /* Vert foncé */
-        }
-
-        .color-description.yellow {
-            color: #FFD700; /* Jaune vif */
-        }
-
-        .color-description.blue {
-            color: #1E90FF; /* Bleu Dodger */
-        }
-
-        .color-description.purple {
-            color: #800080; /* Violet */
-        }
-
-        .color-description.dark-blue {
-            color: #00008B; /* Bleu foncé */
-        }
-
-        .color-description.pink {
-            color: #FF1493; /* Rose profond */
-        }
-
-        /* Styles for the moving button and WhatsApp icon */
-        .flex-container {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            z-index: 1000;
-        }
-
-        .order-button {
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px 20px; /* Taille réduite */
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1rem; /* Taille du texte réduite */
-            font-weight: bold;
-            animation: whatsappPulse 1.5s infinite;
-            text-align: center;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .order-button:hover {
-            background-color: #0056b3;
-        }
-
-        @keyframes whatsappPulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-        .whatsapp-icon {
-            animation: whatsappPulse 1.5s infinite;
-        }
-
-        .whatsapp-icon img {
-            width: 50px;
-            height: 50px;
-        }
-
-        .offer {
-            background-color: #FFD700; /* Jaune vif */
-            color: #FF6347;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .offer .details {
-            margin-top: 10px;
-            font-size: 1.2rem;
-            color: #333;
-        }
-
-        .offer .details ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .offer .details ul li {
-            margin-bottom: 5px;
-        }
-
-        .offer .details .highlighted {
-            color: red;
-            text-decoration: underline;
-        }
-
-        .offer-red {
-            background-color: #FF6347;
-            color: white;
-            animation: glowing 1.5s infinite;
-        }
-
-        .offer-red .price {
-            text-decoration: line-through;
-            color: #FFD700;
-        }
-
-        @keyframes glowing {
-            0% { box-shadow: 0 0 10px #FF0000; }
-            50% { box-shadow: 0 0 30px #FF0000; }
-            100% { box-shadow: 0 0 10px #FF0000; }
-        }
-
-        .form-section {
-            background: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
-            text-align: center;
-            color: #333;
-        }
-
-        .form-section h2 {
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-            color: #333;
-        }
-
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        form label {
-            display: block;
-            text-align: left;
-            margin-bottom: 10px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        form input, form select, form button {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            font-size: 16px;
-            border-radius: 50px;
-            border: 1px solid #1E90FF; /* Bordure bleue pour correspondre au logo */
-        }
-
-        form input, form select {
-            background-color: #fff;
-            color: #333;
-        }
-
-        form button {
-            background-color: #1E90FF;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        form button:hover {
-            background-color: #fff;
-            color: #1E90FF;
-            border: 1px solid #1E90FF;
-        }
+        .color-description.green { color: #006400; }
+        .color-description.yellow { color: #FFD700; }
+        .color-description.blue { color: #1E90FF; }
+        .color-description.purple { color: #800080; }
+        .color-description.dark-blue { color: #00008B; }
+        .color-description.pink { color: #FF1493; }
 
         .visit-site-section {
             color: #333;
@@ -346,20 +202,16 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 1.5rem;
+            .product-images img {
+                width: 80px;
             }
 
-            .hero p {
-                font-size: 1rem;
+            .color-item img {
+                width: 80px;
             }
 
-            .hero img {
-                max-width: 100%;
-            }
-
-            .color-option {
-                justify-content: space-around;
+            .image-caption, .color-description {
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -378,12 +230,12 @@
                 <div class="image-caption">عجلات ذات جودة عالية</div>
             </div>
             <div>
-                <img src="HTB1H_CEaELrK1Rjy0Fjq6zYXFXaE.webp" alt="بدون ضغط مناسب للسفر">
-                <div class="image-caption">بدون ضغط مناسب للسفر</div>
+                <img src="HTB1H_CEaELrK1Rjy0Fjq6zYXFXaE.webp" alt="بدون ضغط مناسب للسفر والمدرسة والعديد من الأغراض">
+                <div class="image-caption">بدون ضغط مناسب للسفر والمدرسة والعديد من الأغراض</div>
             </div>
             <div>
-                <img src="HTB1r4qCazzuK1RjSsppq6xz0XXa7.webp" alt="حامل للأقدام">
-                <div class="image-caption">حامل للأقدام</div>
+                <img src="HTB1r4qCazzuK1RjSsppq6xz0XXa7.webp" alt="حامل للأقدام بجودة عالية">
+                <div class="image-caption">حامل للأقدام بجودة عالية</div>
             </div>
         </div>
         
@@ -418,7 +270,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <!-- Autres sections après -->
             <div class="delivery">
                 <img src="delivery-icon.png" alt="Delivery">
