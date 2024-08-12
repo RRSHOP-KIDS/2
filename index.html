@@ -47,6 +47,24 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
+        .product-images {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .product-images img {
+            width: 150px;
+            border-radius: 10px;
+        }
+
+        .product-images .image-caption {
+            text-align: center;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
         .delivery {
             display: flex;
             justify-content: center;
@@ -70,26 +88,6 @@
             0% {transform: translateX(0);}
             50% {transform: translateX(10px);}
             100% {transform: translateX(0);}
-        }
-
-        .cash-on-delivery {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 10px;
-            font-size: 1.2rem;
-            color: black;
-            position: relative;
-            overflow: hidden;
-            padding: 20px;
-            border-radius: 50%;
-            animation: glowing-circle-animation 1.5s infinite;
-        }
-
-        @keyframes glowing-circle-animation {
-            0% { box-shadow: 0 0 10px #FFD700; }
-            50% { box-shadow: 0 0 30px #FFD700; }
-            100% { box-shadow: 0 0 10px #FFD700; }
         }
 
         .colors-section {
@@ -338,22 +336,6 @@
             background-color: #cc4f39;
         }
 
-        .product-details {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .product-details img {
-            width: 70%;
-            margin: 10px 0;
-        }
-
-        .product-details p {
-            font-size: 1rem;
-            font-weight: bold;
-            color: #333;
-        }
-
         footer {
             text-align: center;
             padding: 20px;
@@ -389,7 +371,23 @@
             <img src="logo.png" alt="Logo">
             <h1>شري لولدك محفظة بجودة مزيانة وباللون لي كيعجبو، باش تشجعو يرجع لقرايتو بثقة في النفس 😊📚🎒 وسط صحابو</h1>
         </div>
-        <!-- Section des produits avancée juste après le texte en darija -->
+        <!-- Intégration des images de produit avec titres en arabe -->
+        <div class="product-images">
+            <div>
+                <img src="HTB1Sp9BaDHuK1RkSndVq6xVwpXaR.webp" alt="عجلات ذات جودة عالية">
+                <div class="image-caption">عجلات ذات جودة عالية</div>
+            </div>
+            <div>
+                <img src="HTB1H_CEaELrK1Rjy0Fjq6zYXFXaE.webp" alt="بدون ضغط مناسب للسفر">
+                <div class="image-caption">بدون ضغط مناسب للسفر</div>
+            </div>
+            <div>
+                <img src="HTB1r4qCazzuK1RjSsppq6xz0XXa7.webp" alt="حامل للأقدام">
+                <div class="image-caption">حامل للأقدام</div>
+            </div>
+        </div>
+        
+        <!-- Section des produits avancée juste après les images de produits -->
         <div class="container">
             <section class="colors-section" style="background-color: #FFE4B5; padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center;">
                 <h2 style="color: #000;">اختر اللون الذي يحبه طفلك</h2>
@@ -440,17 +438,7 @@
     <section class="offer-red" style="background-color: #FF6347; color: #f1eeed; padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center; font-size: 1.5rem; font-weight: bold; width: 100%; box-sizing: border-box;">
         إذا اشتريت 2 <span dir="ltr">Pack</span>  ستستفيد من خصم 100 درهم 
     </section>
-
-    <!-- Section de description du produit avec images -->
-    <div class="product-details container">
-        <img src="HTB1Sp9BaDHuK1RkSndVq6xVwpXaR.webp" alt="Quality Wheels">
-        <p>Quality Wheels</p>
-        <img src="HTB1H_CEaELrK1Rjy0Fjq6zYXFXaE.webp" alt="Free Pressure For Travel, For School">
-        <p>Free Pressure For Travel, For School</p>
-        <img src="HTB1r4qCazzuK1RjSsppq6xz0XXa7.webp" alt="Foot Stand">
-        <p>Foot Stand</p>
-    </div>
-
+    
     <!-- Section "Visitez notre site" -->
     <div class="visit-site-section">
         <p>إذا كنت ترغب في معرفة المزيد عن منتجاتنا الخاصة باحتياجات أطفالك، وخاصة نماذج أخرى من المحافظ</p>
