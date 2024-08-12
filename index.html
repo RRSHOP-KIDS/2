@@ -356,16 +356,14 @@
             justify-content: center;
             align-items: center;
             margin-top: 10px;
-            font-size: 1.2rem;
-            color: black;
+            font-size: 1.2rem; /* Augmentation de la taille */
+            font-weight: bold;
+            color: #000; /* Texte en noir */
             position: relative;
             overflow: hidden;
             padding: 20px;
             border-radius: 50%;
-            border: 3px solid #FFD700;
             animation: glowing-circle-animation 1.5s infinite;
-            background: linear-gradient(45deg, #FFD700, #FF6347);
-            box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.8);
         }
 
         @media (max-width: 768px) {
@@ -410,6 +408,48 @@
             </div>
         </div>
         
+        <!-- Section des produits avancée juste après les images de produits -->
+        <div class="container">
+            <section class="colors-section" style="background-color: #FFE4B5; padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center;">
+                <h2 style="color: #000;">اختر اللون الذي يحبه طفلك</h2>
+                <div class="color-option">
+                    <div class="color-item">
+                        <img src="1.jpeg" alt="حقيبة خضراء">
+                        <div class="color-description green">حقيبة خضراء</div>
+                    </div>
+                    <div class="color-item">
+                        <img src="2.jpeg" alt="حقيبة صفراء">
+                        <div class="color-description yellow">حقيبة صفراء</div>
+                    </div>
+                    <div class="color-item">
+                        <img src="3.jpeg" alt="حقيبة زرقاء">
+                        <div class="color-description blue">حقيبة زرقاء</div>
+                    </div>
+                    <div class="color-item">
+                        <img src="4.jpeg" alt="حقيبة بنفسجية">
+                        <div class="color-description purple">حقيبة بنفسجية</div>
+                    </div>
+                    <div class="color-item">
+                        <img src="5.jpeg" alt="حقيبة زرقاء داكنة">
+                        <div class="color-description dark-blue">حقيبة زرقاء داكنة</div>
+                    </div>
+                    <div class="color-item">
+                        <img src="6.jpeg" alt="حقيبة وردية">
+                        <div class="color-description pink">حقيبة وردية</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Autres sections après -->
+            <div class="delivery">
+                <img src="delivery-icon.png" alt="Delivery">
+                <span>التوصيل مجاني لجميع المدن المغربية في أقل من 48 ساعة</span>
+            </div>
+            <div class="cash-on-delivery">
+                <img src="cash-icon.png" alt="Cash on Delivery">
+                <span>الدفع عند التسليم</span>
+            </div>
+        </div>
     </header>
     
     <!-- Offres -->
@@ -420,49 +460,6 @@
         إذا اشتريت 2 <span dir="ltr">Pack</span>  ستستفيد من خصم 100 درهم 
     </section>
     
-    <!-- Section des produits avancée juste après les offres -->
-    <div class="container">
-        <section class="colors-section" style="background-color: #FFE4B5; padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center;">
-            <h2 style="color: #000;">اختر اللون الذي يحبه طفلك</h2>
-            <div class="color-option">
-                <div class="color-item">
-                    <img src="1.jpeg" alt="حقيبة خضراء">
-                    <div class="color-description green">حقيبة خضراء</div>
-                </div>
-                <div class="color-item">
-                    <img src="2.jpeg" alt="حقيبة صفراء">
-                    <div class="color-description yellow">حقيبة صفراء</div>
-                </div>
-                <div class="color-item">
-                    <img src="3.jpeg" alt="حقيبة زرقاء">
-                    <div class="color-description blue">حقيبة زرقاء</div>
-                </div>
-                <div class="color-item">
-                    <img src="4.jpeg" alt="حقيبة بنفسجية">
-                    <div class="color-description purple">حقيبة بنفسجية</div>
-                </div>
-                <div class="color-item">
-                    <img src="5.jpeg" alt="حقيبة زرقاء داكنة">
-                    <div class="color-description dark-blue">حقيبة زرقاء داكنة</div>
-                </div>
-                <div class="color-item">
-                    <img src="6.jpeg" alt="حقيبة وردية">
-                    <div class="color-description pink">حقيبة وردية</div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Autres sections après -->
-        <div class="delivery">
-            <img src="delivery-icon.png" alt="Delivery">
-            <span>التوصيل مجاني لجميع المدن المغربية في أقل من 48 ساعة</span>
-        </div>
-        <div class="cash-on-delivery">
-            <img src="cash-icon.png" alt="Cash on Delivery">
-            <span>الدفع عند التسليم</span>
-        </div>
-    </div>
-
     <!-- Section "Visitez notre site" -->
     <div class="visit-site-section">
         <p>إذا كنت ترغب في معرفة المزيد عن منتجاتنا الخاصة باحتياجات أطفالك، وخاصة نماذج أخرى من المحافظ</p>
